@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Protected from "@/components/protected";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import Protected from "@/components/Protected";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Ar. Z. Portfolio",
 };

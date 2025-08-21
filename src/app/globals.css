@@ -1,27 +1,37 @@
 @import "tailwindcss";
+
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap");
 
-:root {
-  --font-sans: "IBM Plex Sans", sans-serif;
-  --font-heading: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-  --bg: #f5f9ff;
-  --primary: #1976d2;
-  --primary-light: #63a4ff;
-  --primary-dark: #004ba0;
-  --button: #1976d2;
-  --button-hover: #1565c0;
-  --icon: #1976d2;
-  --text: #1a1a1a;
-  --text-muted: #6b7280;
-  --text-on-light: #ffffff;
-  --text-on-dark: #ffffff;
-  --contrast: #ffb300;
-  --contrast-glow: 0 0 8px rgba(255, 179, 0, 0.7);
-  --input-bg: #ffffff;
-  --input-border: #cfd8dc;
-  --border: #d1d5db;
+  --color-bg: #f5f9ff;
+  --color-primary: #1976d2;
+  --color-primary-light: #63a4ff;
+  --color-primary-dark: #004ba0;
+  --color-button: #1976d2;
+  --color-button-hover: #1565c0;
+  --color-icon: #1976d2;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b7280;
+  --color-contrast: #ffb300;
+  --color-border: #d1d5db;
+}
+
+:root {
+  --bg: var(--color-bg);
+  --primary: var(--color-primary);
+  --primary-light: var(--color-primary-light);
+  --primary-dark: var(--color-primary-dark);
+  --button: var(--color-button);
+  --button-hover: var(--color-button-hover);
+  --icon: var(--color-icon);
+  --text: var(--color-text);
+  --text-muted: var(--color-text-muted);
+  --contrast: var(--color-contrast);
+  --border: var(--color-border);
 }
 
 [data-theme="dark"] {
@@ -34,12 +44,7 @@
   --icon: #e0e1dd;
   --text: #e0e1dd;
   --text-muted: #8a97a6;
-  --text-on-light: #1a1a1a;
-  --text-on-dark: #ffffff;
   --contrast: #ffb300;
-  --contrast-glow: 0 0 8px rgba(255, 179, 0, 0.8);
-  --input-bg: #1b263b;
-  --input-border: #415a77;
   --border: #2c3e50;
 }
 

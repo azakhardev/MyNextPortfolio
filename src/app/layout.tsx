@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Protected from "@/components/protected";
 
 export const metadata: Metadata = {
   title: "Login",
