@@ -3,6 +3,7 @@ import Button from "@/components/forms/Button";
 import Input from "@/components/forms/Input";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useRef } from "react";
+import Text from "@/components/ui/typogrhapy/Text";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function LoginPage() {
 
   function handleLogin() {
     const value = inputRef.current?.value ?? "";
-    if (value) {
+    if (value.trim() !== "") {
       localStorage.setItem("username", value);
 
       router.push("/pages");
@@ -21,19 +22,23 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="h-[100vh] w-[100vw] flex items-center justify-center">
-      <div className="flex flex-col border rounded w-1/6 h-1/2">
-        <div>
-          <Input ref={inputRef} defaultValue={username} />
-        </div>
-        <div className="flex items-center justify-center">
-          <Button
-            onClick={(e) => {
-              handleLogin();
-            }}
-          >
-            Login
-          </Button>
+    <div className="h-[100vh] w-[100vw] flex flex-col items-center justify-around">
+      <div className="flex flex-col gap-2">
+        <Text variant="h1">Artem's Dev Portfolio</Text>
+        <Input
+          ref={inputRef}
+          defaultValue={username}
+          placeholder="Enter yours/company name"
+        />
+      </div>
+      <div className="flex items-center justify-center">
+        <div
+          className="cursor-pointer hover:shadow-glow-primary"
+          onClick={() => {
+            handleLogin();
+          }}
+        >
+          Login
         </div>
       </div>
     </div>
