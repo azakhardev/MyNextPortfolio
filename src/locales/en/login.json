@@ -1,6 +1,6 @@
 {
   "Login": {
-    "input-placeholder": "Zadejte název firmy nebo Vaše jméno",
-    "button": "Pokračovat"
+    "input-placeholder": "Enter yous/company name",
+    "button": "Enter"
   }
 }

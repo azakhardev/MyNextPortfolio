@@ -27,7 +27,7 @@ export default function LoginPage() {
   return (
     <div className="w-[100vw] flex flex-col items-center mt-[25vh]">
       <div className="flex flex-col justify-between h-[20vh] md:h-[15vh] text-center px-4 md:px-0">
-        <Text variant="h1">Artem's Dev Portfolio</Text>
+        <Text variant="4xl">Artem's Dev Portfolio</Text>
         <Input
           ref={inputRef}
           defaultValue={username}

@@ -32,7 +32,7 @@
   --color-button-secondary-hover: var(--color-secondary-light);
 
   /* Kontrastní barvy */
-  --color-contrast: #f97316;
+  --color-contrast: #ffffff;
   --color-contrast-gold: #fbbf24;
 
   /* Inputy */
@@ -99,51 +99,50 @@
   --input-placeholder: var(--color-input-placeholder);
 }
 
-/* Light mode */
+/* Light mode - modrý soft vibe */
 [data-theme="light"] {
-  /* Základní */
-  --bg: #ffffff;
-  --card: #f8fafc;
-  --text: #1a202c;
-  --text-muted: #718096;
-  --border: #e2e8f0;
+  /* Základní - modrý soft tón */
+  --bg: #e2e8f8;
+  --card: #f0f4ff;
+  --text: #090a0c;
+  --text-muted: #64748b;
+  --border: #cbd5e1;
 
-  /* Primary a secondary */
-  --primary: #0969da;
-  --primary-light: #2f81f7;
-  --primary-dark: #0550ae;
-  --secondary: #6d28d9;
-  --secondary-light: #7c3aed;
-  --secondary-dark: #5b21b6;
+  /* Primary a secondary - modré spektrum */
+  --primary: #1e40af;
+  --primary-light: #3b82f6;
+  --primary-dark: #1e3a8a;
+  --secondary: #4338ca;
+  --secondary-light: #6366f1;
+  --secondary-dark: #3730a3;
 
   /* Tlačítka */
   --button: var(--primary);
-  --button-text: var(--color-button-text);
   --button-hover: var(--primary-dark);
   --button-secondary: var(--secondary);
   --button-secondary-hover: var(--secondary-dark);
 
-  /* Kontrastní */
-  --contrast: #ea580c;
-  --contrast-gold: #d97706;
+  /* Kontrastní - teplé pro kontrast s modrým */
+  --color-contrast: #3b82f6;
+  --color-contrast-gold: #f59e0b;
 
-  /* Inputy */
-  --input-bg: #ffffff;
-  --input-border: #d1d5db;
+  /* Inputy - modrý tint */
+  --input-bg: #f8faff;
+  --input-border: #cbd5e1;
   --input-border-focus: var(--primary);
   --input-text: var(--text);
-  --input-placeholder: #9ca3af;
+  --input-placeholder: #94a3b8;
 
-  /* Hover efekty pro light mode */
-  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
-  --shadow-hover-primary: 0 8px 25px rgba(9, 105, 218, 0.3);
-  --shadow-hover-secondary: 0 8px 25px rgba(109, 40, 217, 0.3);
-  --shadow-hover-contrast: 0 8px 25px rgba(234, 88, 12, 0.3);
-  --shadow-hover-gold: 0 8px 25px rgba(217, 119, 6, 0.3);
+  /* Hover efekty - modrý tint */
+  --shadow-hover: 0 8px 25px rgba(30, 64, 175, 0.12);
+  --shadow-hover-primary: 0 8px 25px rgba(30, 64, 175, 0.25);
+  --shadow-hover-secondary: 0 8px 25px rgba(67, 56, 202, 0.25);
+  --shadow-hover-contrast: 0 8px 25px rgba(220, 38, 38, 0.25);
+  --shadow-hover-gold: 0 8px 25px rgba(245, 158, 11, 0.25);
 
-  /* Focus stavy pro light mode */
-  --shadow-focus: 0 0 0 3px rgba(9, 105, 218, 0.3);
-  --shadow-focus-input: 0 0 0 2px rgba(9, 105, 218, 0.4);
+  /* Focus stavy */
+  --shadow-focus: 0 0 0 3px rgba(30, 64, 175, 0.25);
+  --shadow-focus-input: 0 0 0 2px rgba(30, 64, 175, 0.3);
 }
 
 /* Globální styly */
@@ -157,6 +156,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   transition: var(--transition-colors);
+  overflow-x: hidden;
 }
 
 h1,
