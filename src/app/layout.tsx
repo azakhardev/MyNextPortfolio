@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { IBM_Plex_Sans, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import I18nProvider from "./i18n-provider";
+import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],

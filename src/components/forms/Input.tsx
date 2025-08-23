@@ -3,7 +3,13 @@ import React, { forwardRef } from "react";
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
-  return <input className="p-1 border rounded-md" ref={ref} {...props} />;
+  return (
+    <input
+      className="p-1 hover:shadow-glow-primary focus:shadow-glow-primary focus:ring border rounded-md"
+      ref={ref}
+      {...props}
+    />
+  );
 });
 
 Input.displayName = "Input";
