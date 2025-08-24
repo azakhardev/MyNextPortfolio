@@ -1,25 +1,35 @@
 "use client";
 
-import { useEffect } from "react";
-import Button from "../forms/Button";
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 
 export default function ThemeSwitch() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.body.setAttribute("data-theme", savedTheme);
+    if (theme) {
+      document.body.setAttribute("data-theme", theme);
     } else {
       document.body.setAttribute("data-theme", "dark");
+      setTheme("dark");
     }
   }, []);
 
   function toggleTheme() {
-    const currentTheme = document.body.getAttribute("data-theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
+    const newTheme = theme === "light" ? "dark" : "light";
     document.body.setAttribute("data-theme", newTheme);
+
+    setTheme(newTheme);
 
     localStorage.setItem("theme", newTheme);
   }
 
-  return <Button onClick={() => toggleTheme()}>Switch Theme</Button>;
+  return (
+    <div
+      className="transition-all hover:scale-110 active:scale-95 bg-card border-border p-2 rounded border cursor-pointer"
+      onClick={() => toggleTheme()}
+    >
+      {theme === "light" ? <Moon /> : <Sun />}
+    </div>
+  );
 }

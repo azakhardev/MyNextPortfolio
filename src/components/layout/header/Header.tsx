@@ -7,6 +7,8 @@ import { useState } from "react";
 import { MenuPortal } from "./MenuPortal";
 import HeaderNavLink from "./HeaderNavLink";
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
+import LanguageSelector from "@/components/ui/LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -45,7 +47,10 @@ export default function Header() {
 function NavLinks() {
   return (
     <>
-      <ThemeSwitch />
+      <div className="flex flex-row gap-2 items-center">
+        <ThemeSwitch />
+        <LanguageSelector />
+      </div>
       <HeaderNavLink text={i18next.t("Header.home")} url="/pages" />
       <HeaderNavLink
         text={i18next.t("Header.projects")}

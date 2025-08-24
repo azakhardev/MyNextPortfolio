@@ -38,7 +38,7 @@ export default async function RootLayout({
       lang="en"
       className={`${plexSans.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}
     >
-      <body className={`antialiased bg-bg`}>
+      <body className={`antialiased bg-bg scrollbar-hide`}>
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
