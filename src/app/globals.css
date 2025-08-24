@@ -14,6 +14,7 @@
   --color-bg: #0d1117;
   --color-footer: #000000;
   --color-card: #161b22;
+  --color-card-hover: #1f242d;
   --color-text: #f0f6fc;
   --color-text-muted: #8b949e;
   --color-border: #30363d;
@@ -107,6 +108,7 @@
   --color-bg: #e2e8f8;
   --color-footer: var(--color-primary-dark);
   --color-card: #f0f4ff;
+  --color-card-hover: #e0e8ff;
   --color-text: #090a0c;
   --color-text-muted: #64748b;
   --color-border: #cbd5e1;

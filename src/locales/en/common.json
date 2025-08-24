@@ -4,12 +4,18 @@
     "projects": "Projects",
     "jobs": "Jobs",
     "contact": "Contacts",
-    "language": "Language"
+    "language": "Language",
+    "download": "Download CV"
   },
   "Footer": {
     "libraries": "Used libraries",
     "description": "This website was created in the fall of 2025 using the Next.js framework. It serves as a replacement for my resume and as my 'business card' for employers or partners. It replaces an older website written in HTML, CSS, and JS, which you can find in the Projects section. My new projects and work experiences are added to this website continuously, and occasionally it undergoes a redesign. The data you use to log in is only for me, so I can see who visits my site and which projects they view. Thank you for taking a moment of your time to visit.",
     "contacts": "Contacts",
     "tel": "Phone Number"
+  },
+  "Dialogs": {
+    "CV": {
+      "select": "Choose the variant of CV to download."
+    }
   }
 }
