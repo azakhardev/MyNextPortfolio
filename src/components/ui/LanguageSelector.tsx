@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/components/hooks/useLanguage";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Triangle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -26,26 +26,33 @@ export default function LanguageSelector() {
           <Triangle />
         </motion.div>
       </div>
-      {showSelector && (
-        <div className="absolute left-0 top-full w-full mt-1 z-10 bg-card rounded-md shadow-md flex flex-col gap-1 p-2">
-          <button
-            onClick={() => setLanguage("cs")}
-            className={`block px-2 py-1 text-left w-full hover:font-black ${
-              current === "cs" ? "font-bold" : undefined
-            }`}
+      <AnimatePresence>
+        {showSelector && (
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 100 }}
+            exit={{ y: -40, opacity: 0 }}
+            className="absolute left-0 w-full mt-1 z-10 bg-card rounded-md shadow-md flex flex-col gap-1 p-2"
           >
-            Česky
-          </button>
-          <button
-            onClick={() => setLanguage("en")}
-            className={`block px-2 py-1 text-left w-full hover:font-black ${
-              current === "en" ? "font-bold" : undefined
-            }`}
-          >
-            English
-          </button>
-        </div>
-      )}
+            <button
+              onClick={() => setLanguage("cs")}
+              className={`block px-2 py-1 text-left w-full hover:font-black ${
+                current === "cs" ? "font-bold" : undefined
+              }`}
+            >
+              Česky
+            </button>
+            <button
+              onClick={() => setLanguage("en")}
+              className={`block px-2 py-1 text-left w-full hover:font-black ${
+                current === "en" ? "font-bold" : undefined
+              }`}
+            >
+              English
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -45,19 +45,18 @@ export default function Header() {
 }
 
 function NavLinks() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="flex flex-row gap-2 items-center">
         <ThemeSwitch />
         <LanguageSelector />
       </div>
-      <HeaderNavLink text={i18next.t("Header.home")} url="/pages" />
-      <HeaderNavLink
-        text={i18next.t("Header.projects")}
-        url="/pages/projects"
-      />
-      <HeaderNavLink text={i18next.t("Header.jobs")} url="/pages/jobs" />
-      <HeaderNavLink text={i18next.t("Header.contact")} url="/pages/contacts" />
+      <HeaderNavLink text={t("Header.home")} url="/pages" />
+      <HeaderNavLink text={t("Header.projects")} url="/pages/projects" />
+      <HeaderNavLink text={t("Header.jobs")} url="/pages/jobs" />
+      <HeaderNavLink text={t("Header.contact")} url="/pages/contacts" />
     </>
   );
 }

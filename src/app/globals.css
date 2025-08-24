@@ -12,6 +12,7 @@
 
   /* Základní barvy */
   --color-bg: #0d1117;
+  --color-footer: #000000;
   --color-card: #161b22;
   --color-text: #f0f6fc;
   --color-text-muted: #8b949e;
@@ -104,6 +105,7 @@
 [data-theme="light"] {
   /* Základní - modrý soft tón */
   --color-bg: #e2e8f8;
+  --color-footer: var(--color-primary-dark);
   --color-card: #f0f4ff;
   --color-text: #090a0c;
   --color-text-muted: #64748b;

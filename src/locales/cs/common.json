@@ -5,5 +5,11 @@
     "jobs": "Pracovní zkušenosti",
     "contact": "Kontakty",
     "language": "Jazyk"
+  },
+  "Footer": {
+    "libraries": "Použité knihovny",
+    "description": "Tento web byl vytvořen na podzim 2025 s pomocí Next.js frameworku. Slouží jako náhrada životopisu a moje 'vizitka' pro zaměstnavatele či partnery. Jedná se o náhradu starého webu, napsného v HTML, CSS a JS, který můžete najít v sekci Projekty. Na tento web se průběžné přidávají moje nové projekty a pracovní zkušenosti, případně se někdy dělá redesign. Vaše údaje, přes které se přihlašujete slouží pouze pro mě, abych viděl, kdo navštěvuje můj web a na jaké projekty se dívá. Děkuji, že jste mi věnovali chvilku svého času.",
+    "contacts": "Kontakty",
+    "tel": "Telefon"
   }
 }
