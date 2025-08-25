@@ -6,7 +6,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-border flex flex-col md:flex-row text-sm bg-footer text-stone-300">
+    <footer className="border-t border-border flex flex-col-reverse md:flex-row text-sm bg-footer text-stone-300 ">
       <div className="hidden lg:flex flex-1 flex-col items-center py-2">
         <ul className="list-disc list-inside">
           <strong>{t("Footer.libraries")}</strong>
@@ -18,8 +18,9 @@ export default function Footer() {
           <li>Typescript</li>
         </ul>
       </div>
-      <div className="flex-1 flex justify-center py-4 text-justify px-4 md:px-0">
+      <div className="flex-1 flex justify-center py-4 text-justify px-4 lg:px-0">
         {t("Footer.description")}
+        <br /> <br />© 2025 Artem Zacharčenko. All rights reserved.
       </div>
       <div className="flex-1 flex items-center flex-col py-2">
         <ul className="list-disc list-inside">

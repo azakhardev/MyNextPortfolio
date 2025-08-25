@@ -56,10 +56,12 @@ function NavLinks() {
         <ThemeSwitch />
         <LanguageSelector />
       </div>
-      <HeaderNavLink text={t("Header.home")} url="/pages" />
-      <HeaderNavLink text={t("Header.projects")} url="/pages/projects" />
-      <HeaderNavLink text={t("Header.jobs")} url="/pages/jobs" />
-      <HeaderNavLink text={t("Header.contact")} url="/pages/contacts" />
+      <nav className="flex flex-col md:flex-row gap-4">
+        <HeaderNavLink text={t("Header.home")} url="/pages" />
+        <HeaderNavLink text={t("Header.projects")} url="/pages/projects" />
+        <HeaderNavLink text={t("Header.jobs")} url="/pages/jobs" />
+        <HeaderNavLink text={t("Header.contact")} url="/pages/contacts" />
+      </nav>
     </>
   );
 }
